@@ -33,13 +33,16 @@ int main()
     // freopen("file.in", "r", stdin);
     // freopen("file.out", "w", stdout);
 
-    int n;
-    cin >> n;
-    int arr[n-1];
-    for(int i = 0; i < n-1; i++) cin >> arr[i];
-    sort(arr, arr+n);
-    for(int i = 1; i <= n-1; i++) if (i != arr[i])
-        cout << i;
+    string s;
+    cin >> s;
+
+    int mx = 1, cnt = 1;
+    for(int i = 1; i < s.size()-1; i++) if (s[i] == s[i-1]) {
+        while(s[i] == s[i-1]) { cnt++; i++; }
+        mx = max(mx,cnt);
+        cnt = 1;
+    }
+    cout << mx;
 
     return 0;
 }
