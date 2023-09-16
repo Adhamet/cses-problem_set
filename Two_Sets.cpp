@@ -33,7 +33,28 @@ int main()
     // freopen("file.in", "r", stdin);
     // freopen("file.out", "w", stdout);
 
-
+    int n,sum;
+    cin >> n;
+    sum = n*(n+1) / 2;
+    if (sum % 2 == 0) {
+        cout << "YES\n";
+        if (n % 2 == 0) {
+            cout << n/2 << el;
+            for(int i = 2; i <= n/2; i+=2)
+                cout << i << " " << n-i+1 << " ";
+            cout << el << n/2 << el;
+            for(int i = 1; i <= n/2; i+=2)
+                cout << i << " " << n-i+1 << " ";
+        } else {
+            cout << n/2 << el;
+            for(int i = 2; i <= (n/2); i+=2)
+                cout << i << " " << n-i << " ";
+            cout << n << el << n/2+1 << el;
+            for(int i = 1; i <= (n/2); i+=2)
+                cout << i << " " << n-i << " ";
+        }
+    }
+    else cout << "NO";
 
     return 0;
 }
