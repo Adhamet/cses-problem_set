@@ -18,13 +18,13 @@ int main()
     // freopen("file.in", "r", stdin);
     // freopen("file.out", "w", stdout);
 	
-	int n;
+	ll n;
 	cin >> n;
-	ll trailing_zeroes=0;
 
+	ll result=0;
 	for(ll i = 5; (n/i) >= 1; i*=5)
-		trailing_zeroes += (n/i);
-	cout << trailing_zeroes;
+		result += (n/i);
+	cout << result;
 
     return 0;
 }
